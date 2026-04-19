@@ -3,18 +3,18 @@ const express = require("express");
 const app = express();
 const http = require("http");
 
-// 1
+// 1 Starting code
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // 2 Sessionn codelar uchun
-// 3
+// 3 Views code
 
 app.set("views", "views");
 app.set("view engine", "ejs");
 
-//4
+//4 Routing code
 
 app.get("/hello", function (req, res) {
   res.end(`<h1> HELLO WORLD by Sam Developer</h1>`);
