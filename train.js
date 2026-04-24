@@ -1,4 +1,30 @@
 // // A Task
+
+// function greeting(a, b) {
+//   let count = 0;
+//   for (i = 0; i < b.length; i++) {
+//     if (a === b[i]) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+// const task_1 = greeting("a", "samanadara");
+// console.log(task_1);
+// console.log("=============");
+// function introduce(c, d) {
+//   let count1 = 0;
+//   for (i = 0; i < d.length; i++) {
+//     if (c === d[i]) {
+//       count1++;
+//     }
+//   }
+//   return count1;
+// }
+// const task2 = introduce("e", "engenereningennge");
+// console.log(task2);
+
+/* Task tugadi     */
 // // console.log("train task ishga tushdi");
 // // // Callback function //
 
