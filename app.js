@@ -1,9 +1,11 @@
 console.log("Web serverni boshlash");
 const express = require("express");
 const app = express();
-const http = require("http");
 const res = require("express/lib/response");
 
+// MongoDB chaqirish
+
+const db = require("./server").db();
 // 1 Starting code
 app.use(express.static("public"));
 app.use(express.json());
@@ -30,10 +32,4 @@ app.get("/", function (req, res) {
 //   res.end(`Sovg'alar bulimiga xush kelibsiz`);
 // });
 
-const server = http.createServer(app);
-let PORT = 491;
-server.listen(PORT, function () {
-  console.log(
-    `The server running succesfully on port:${PORT},  http://localhost:${PORT} `,
-  );
-});
+module.exports = app;
