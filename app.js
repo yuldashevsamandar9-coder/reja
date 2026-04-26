@@ -21,7 +21,7 @@ app.post("/create-item", (req, res) => {
   res.json({ test: "succes " });
 });
 app.get("/", function (req, res) {
-  res.render("harid");
+  res.render("reja");
 });
 // app.get("/hello", function (req, res) {
 //   res.end(`<h1> HELLO WORLD by Sam Developer</h1>`);
@@ -33,5 +33,7 @@ app.get("/", function (req, res) {
 const server = http.createServer(app);
 let PORT = 491;
 server.listen(PORT, function () {
-  console.log(`The server running succesfully on port: ${PORT} `);
+  console.log(
+    `The server running succesfully on port:${PORT},  http://localhost:${PORT} `,
+  );
 });
