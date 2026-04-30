@@ -1,7 +1,6 @@
 console.log("Web serverni boshlash");
 const express = require("express");
 const app = express();
-const res = require("express/lib/response");
 
 // MongoDB chaqirish
 
@@ -19,38 +18,6 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 //4 Routing code
-
-app.post("/create-item", (req, res) => {
-  console.log("user entered /create-item");
-  const new_reja = req.body.reja;
-  db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-    console.log(data.ops);
-    res.json(data.ops[0]);
-  });
-});
-
-//   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-//     console.log(data.ops);
-//     res.json(data.ops[0]);
-//     // if (err) {
-//     //   console.log(err);
-//     //   res.end("something went wrong");
-//     // } else {
-//     //   res.end("successfully added");
-//     // }
-
-// });
-// db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-//   // console.log(data.ops);
-//   //  res.json(data.ops[0]);
-//    if (err) {
-//     console.log(err);
-//     res.end("something went wrong");
-//    } else {
-//      res.end("successfully added");
-//   }
-// });
-
 app.get("/", function (req, res) {
   console.log("user entered /");
   db.collection("plans")
@@ -64,11 +31,24 @@ app.get("/", function (req, res) {
       }
     });
 });
-// app.get("/hello", function (req, res) {
-//   res.end(`<h1> HELLO WORLD by Sam Developer</h1>`);
-// });
-// app.get("/gift", function (req, res) {
-//   res.end(`Sovg'alar bulimiga xush kelibsiz`);
-// });
 
+app.post("/create-item", (req, res) => {
+  console.log("user entered /create-item");
+  const new_reja = req.body.reja;
+  db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
+    console.log(data.ops);
+    res.json(data.ops[0]);
+  });
+});
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    function (err, data) {
+      res.json({ state: "success" });
+    },
+  );
+  // console.log(id);
+  // res.end("done");
+});
 module.exports = app;
