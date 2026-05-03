@@ -71,3 +71,60 @@ console.log(
   checkContent1("xojiakbar", "rabkaijoh"),
 ); /* Xulosa bu yerdagi 2 ta string ichidagi harflar teng buls amisol uchun 2 ta x, 2 a va hokaza bulsa true
 chiqarakan moboda bittasi boshqacha bulib qolsa false chiqarakan */
+/* D-TASK
+
+Shunday class tuzing tuzing nomi Shop,
+ va uni constructoriga 3 hil mahsulot pass bolsin, 
+ hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul.
+  Har bir method ishga tushgan vaqt ham log qilinsin.
+   MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! 
+   shop.sotish('non', 3) & shop.qabul('cola', 4) & 
+   shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
+
+
+   introduce(){
+    console.log(`My name is ${this.name} I am ${this.age} years old `);
+  } 
+  greet() {
+    console.log(`Hi how are you`);
+  }
+  static help() {
+    console.log (`Hi , Im am Person class, how can I help you?`);
+    
+  }
+
+@MITASK */
+class Shop {
+  constructor(lagmon, non, cola) {
+    this.lagmon = lagmon;
+    this.non = non;
+    this.cola = cola;
+  }
+
+  qoldiq() {
+    let xozir = new Date().toLocaleTimeString();
+    return `xozir  ${xozir}da  ${this.lagmon} ta lagmon, ${this.non} ta non va ${this.cola} ta cola bor!`;
+  }
+  sotish(lagmon, non, cola) {
+    let xozirgi = new Date().toLocaleTimeString();
+
+    return `xozir ${xozirgi}da ${this.lagmon} ta lagmon, ${this.non} ta non va ${this.cola} ta cola sotildi!`;
+  }
+  qabul() {
+    let hozir = new Date().toLocaleTimeString();
+    return `hozir ${hozir}da ${this.lagmon} ta lagmon, ${this.non} ta non va ${this.cola} ta cola qushildi!`;
+  }
+  jami() {
+    let hozir1 = new Date().toLocaleTimeString();
+    return `hozir1 ${hozir1}da ${this.lagmon} ta lagmon ${this.non} ta non va ${this.cola} ta cola mavjud!`;
+  }
+}
+const myshop = new Shop(10, 5, 10);
+console.log(myshop.qoldiq());
+const myShop = new Shop(3, 2, 4);
+console.log(myShop.sotish());
+const myshop3 = new Shop(2, 5, 4);
+console.log(myshop3.qabul());
+
+const myshop4 = new Shop(9, 8, 10);
+console.log(myshop4.jami());
