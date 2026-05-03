@@ -81,17 +81,8 @@ Shunday class tuzing tuzing nomi Shop,
    shop.sotish('non', 3) & shop.qabul('cola', 4) & 
    shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
 
-
-   introduce(){
-    console.log(`My name is ${this.name} I am ${this.age} years old `);
-  } 
-  greet() {
-    console.log(`Hi how are you`);
-  }
-  static help() {
-    console.log (`Hi , Im am Person class, how can I help you?`);
     
-  }
+  
 
 @MITASK */
 class Shop {
