@@ -105,10 +105,6 @@ class Shop {
     let hozir = new Date().toLocaleTimeString();
     return `hozir ${hozir}da ${this.lagmon} ta lagmon, ${this.non} ta non va ${this.cola} ta cola qushildi!`;
   }
-  jami() {
-    let hozir1 = new Date().toLocaleTimeString();
-    return `hozir1 ${hozir1}da ${this.lagmon} ta lagmon ${this.non} ta non va ${this.cola} ta cola mavjud!`;
-  }
 }
 const myshop = new Shop(10, 5, 10);
 console.log(myshop.qoldiq());
@@ -116,6 +112,3 @@ const myShop = new Shop(3, 2, 4);
 console.log(myShop.sotish());
 const myshop3 = new Shop(2, 5, 4);
 console.log(myshop3.qabul());
-
-const myshop4 = new Shop(9, 8, 10);
-console.log(myshop4.jami());
