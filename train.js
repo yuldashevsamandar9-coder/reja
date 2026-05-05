@@ -112,3 +112,17 @@ const myShop = new Shop(3, 2, 4);
 console.log(myShop.sotish());
 const myshop3 = new Shop(2, 5, 4);
 console.log(myshop3.qabul());
+
+/*.   TASK E Shunday function tuzing u bitta string argumentni qabul qilib osha 
+stringni teskari qilib return qilsin.
+masalan: getReverse("hello") return "olleh" */
+
+function getReverse(str) {
+  return [...str].reverse().join(""); // join ichida qushtirnoq  bulgani uchun olleh buldi bir tekis
+}
+console.log(getReverse("hello"));
+
+function getReversee(str) {
+  return [...str].reverse().join(); // qushtirnoqsiz r,a,d,n,a,m,a,s shaklida buldi
+}
+console.log(getReversee("samandar"));
