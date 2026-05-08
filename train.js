@@ -6,7 +6,7 @@ B-TASK
 
 Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin. MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 
-@MITASK
+@MITASK 
 */
 // function countDigits(string) {
 // //   let count = 0;
@@ -52,24 +52,25 @@ Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda
 
 // @MITASK */
 
-function checkContent(xoji, boy) {
-  return [...xoji].sort().join("") === [...boy].sort().join("");
-}
+// function checkContent(xoji, boy) {
+//   return [...xoji].sort().join("") === [...boy].sort().join("");
+// }
 
-console.log(checkContent("mitgroup", "gmtiprou"));
-console.log("============");
-function checkContent1(eshmat, teshmat) {
-  return [...eshmat].sort().join("") === [...teshmat].sort().join("");
-}
-console.log(checkContent1("xojiakbar", "rabkaijox"));
+// console.log(checkContent("mitgroup", "gmtiprou"));
+// console.log("============");
+// function checkContent1(eshmat, teshmat) {
+//   return [...eshmat].sort().join("") === [...teshmat].sort().join("");
+// }
+// console.log(checkContent1("xojiakbar", "rabkaijox"));
 
-console.log("============");
-function checkContent(eshmat1, teshmat2) {
-  return [...eshmat1].sort().join("") === [...teshmat2].sort().join("");
-}
-console.log(
-  checkContent1("xojiakbar", "rabkaijoh"),
-); /* Xulosa bu yerdagi 2 ta string ichidagi harflar teng buls amisol uchun 2 ta x, 2 a va hokaza bulsa true
+// console.log("============");
+// function checkContent(eshmat1, teshmat2) {
+//   return [...eshmat1].sort().join("") === [...teshmat2].sort().join("");
+// }
+// console.log(
+//   checkContent1("xojiakbar", "rabkaijoh"),
+//);
+/* Xulosa bu yerdagi 2 ta string ichidagi harflar teng buls amisol uchun 2 ta x, 2 a va hokaza bulsa true
 chiqarakan moboda bittasi boshqacha bulib qolsa false chiqarakan */
 /* D-TASK
 
@@ -85,44 +86,63 @@ Shunday class tuzing tuzing nomi Shop,
   
 
 @MITASK */
-class Shop {
-  constructor(lagmon, non, cola) {
-    this.lagmon = lagmon;
-    this.non = non;
-    this.cola = cola;
-  }
+// class Shop {
+//   constructor(lagmon, non, cola) {
+//     this.lagmon = lagmon;
+//     this.non = non;
+//     this.cola = cola;
+//   }
 
-  qoldiq() {
-    let xozir = new Date().toLocaleTimeString();
-    return `xozir  ${xozir}da  ${this.lagmon} ta lagmon, ${this.non} ta non va ${this.cola} ta cola bor!`;
-  }
-  sotish(lagmon, non, cola) {
-    let xozirgi = new Date().toLocaleTimeString();
+//   qoldiq() {
+//     let xozir = new Date().toLocaleTimeString();
+//     return `xozir  ${xozir}da  ${this.lagmon} ta lagmon, ${this.non} ta non va ${this.cola} ta cola bor!`;
+//   }
+//   sotish(lagmon, non, cola) {
+//     let xozirgi = new Date().toLocaleTimeString();
 
-    return `xozir ${xozirgi}da ${this.lagmon} ta lagmon, ${this.non} ta non va ${this.cola} ta cola sotildi!`;
+//     return `xozir ${xozirgi}da ${this.lagmon} ta lagmon, ${this.non} ta non va ${this.cola} ta cola sotildi!`;
+//   }
+//   qabul() {
+//     let hozir = new Date().toLocaleTimeString();
+//     return `hozir ${hozir}da ${this.lagmon} ta lagmon, ${this.non} ta non va ${this.cola} ta cola qushildi!`;
+//   }
+// }
+// const myshop = new Shop(10, 5, 10);
+// console.log(myshop.qoldiq());
+// const myShop = new Shop(3, 2, 4);
+// console.log(myShop.sotish());
+// const myshop3 = new Shop(2, 5, 4);
+// console.log(myshop3.qabul());
+
+// /*.   TASK E Shunday function tuzing u bitta string argumentni qabul qilib osha
+// stringni teskari qilib return qilsin.
+// masalan: getReverse("hello") return "olleh" */
+
+// function getReverse(str) {
+//   return [...str].reverse().join(""); // join ichida qushtirnoq  bulgani uchun olleh buldi bir tekis
+// }
+// console.log(getReverse("hello"));
+
+// function getReversee(str) {
+//   return [...str].reverse().join(); // qushtirnoqsiz r,a,d,n,a,m,a,s shaklida buldi
+// }
+// console.log(getReversee("samandar"));
+
+/* F-TASK
+
+Shunday findDoublers function tuzing, unga faqat bitta string argument pass bolib, agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak. MASALAN: getReverse("hello") return true return qiladi.
+
+@MITASK
+*/
+
+function stringli(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str.indexOf(str[i]) !== str.lastIndexOf(str[i])) {
+      return true;
+    }
   }
-  qabul() {
-    let hozir = new Date().toLocaleTimeString();
-    return `hozir ${hozir}da ${this.lagmon} ta lagmon, ${this.non} ta non va ${this.cola} ta cola qushildi!`;
-  }
+  return false;
 }
-const myshop = new Shop(10, 5, 10);
-console.log(myshop.qoldiq());
-const myShop = new Shop(3, 2, 4);
-console.log(myShop.sotish());
-const myshop3 = new Shop(2, 5, 4);
-console.log(myshop3.qabul());
 
-/*.   TASK E Shunday function tuzing u bitta string argumentni qabul qilib osha 
-stringni teskari qilib return qilsin.
-masalan: getReverse("hello") return "olleh" */
-
-function getReverse(str) {
-  return [...str].reverse().join(""); // join ichida qushtirnoq  bulgani uchun olleh buldi bir tekis
-}
-console.log(getReverse("hello"));
-
-function getReversee(str) {
-  return [...str].reverse().join(); // qushtirnoqsiz r,a,d,n,a,m,a,s shaklida buldi
-}
-console.log(getReversee("samandar"));
+console.log(stringli("hello")); // l harfi ikki marta qatnashganligi uchun true javobni berdi
+console.log(stringli("sam"));
