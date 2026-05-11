@@ -146,3 +146,25 @@ function stringli(str) {
 
 console.log(stringli("hello")); // l harfi ikki marta qatnashganligi uchun true javobni berdi
 console.log(stringli("sam"));
+/* 
+G-TASK
+
+Shunday function tuzingki unga integerlardan iborat array pass bolsin va 
+function bizga osha arrayning eng katta qiymatiga tegishli birinchi indexni qaytarsin.
+ MASALAN: getHighestIndex([5, 21, 12, 21, 8]) return qiladi 1 sonini.
+
+@MITASK
+*/
+function index1(arr) {
+  let abs = arr[0];
+  let xujayin = 0;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > abs) {
+      abs = arr[i];
+      xujayin = i;
+    }
+  }
+  return xujayin;
+}
+const result1 = index1([5, 21, 4, 21, 8]);
+console.log(result1);
