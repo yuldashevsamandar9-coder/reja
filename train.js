@@ -166,5 +166,12 @@ function index1(arr) {
   }
   return xujayin;
 }
-const result1 = index1([5, 21, 4, 21, 8]);
-console.log(result1);
+/*  H-TASK
+
+Shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib, faqat positive qiymatlarni olib string holatda return qilsin. MASALAN: getPositive([1, -4, 2]) return qiladi "12".
+
+@MITASK  */
+function taskh(array) {
+  return array.filter((num) => num > 0).join("");
+}
+console.log(taskh([1, -8, 9]));
