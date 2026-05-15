@@ -175,3 +175,20 @@ function taskh(array) {
   return array.filter((num) => num > 0).join("");
 }
 console.log(taskh([1, -8, 9]));
+/*  I-TASK
+
+Shunday function yozing, u parametridagi array ichida eng kop takrorlangan raqamni topib qaytarsin.
+ MASALAN: majorityElement([1,2,3,4,5,4,3,4]) return 4.
+
+@MITASK*/
+
+const list = [1, 4, 5, 3, 4, 7];
+let count = 0;
+const newList2 = list.filter((ele) => {
+  if (ele === 4 && count === 0) {
+    count++;
+    return true;
+  }
+  return false;
+});
+console.log("newList2:", newList2);
